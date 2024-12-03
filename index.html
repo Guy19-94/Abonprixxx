@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Amélioré</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Enhanced E-Commerce</h1>
+        <a href="cart.html">View Cart</a>
+        <input type="text" id="searchBar" placeholder="Search products..." oninput="filterProducts()">
+    </header>
+    <nav>
+        <button onclick="filterByCategory('all')">All</button>
+        <button onclick="filterByCategory('electronics')">Electronics</button>
+        <button onclick="filterByCategory('accessories')">Accessories</button>
+        <button onclick="filterByCategory('Animaux')">Animaux</button>
+    </nav>
+    <main>
+        <div class="product-list" id="productList"></div>
+    </main>
+    <section class="admin">
+        <h2>Admin: Add New Product</h2>
+        <form id="addProductForm">
+            <label for="productName">Name:</label>
+            <input type="text" id="productName" required>
+            <label for="productCategory">Category:</label>
+            <input type="text" id="productCategory" required>
+            <label for="productPrice">Price:</label>
+            <input type="number" id="productPrice" required>
+            <label for="productImage">Image URL:</label>
+            <input type="url" id="productImage" required>
+            <label for="productDescription">Description:</label>
+            <textarea id="productDescription" rows="3"></textarea>
+            <button type="submit">Add Product</button>
+        </form>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
